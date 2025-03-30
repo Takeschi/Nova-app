@@ -22,9 +22,13 @@ G0 = 6.67430e-11
 csc = round(s0 - (alpha * tau) - (beta * dp), 3)
 geff = round(G0 - (alpha * md) - (beta * sd), 12)
 
-# Input utente
-st.markdown("---")
-user_input = st.text_input("Scrivi a NOVA:", "NOVA, qual è il tuo stato?")
+user_input = st.text_input("Scrivi a NOVA:")
+
+if st.button("Invia a NOVA") and user_input:
+    st.markdown("---")
+    st.subheader("📡 Risposta di NOVA:")
+    ...
+
 
 # Risposta generata
 if user_input:
